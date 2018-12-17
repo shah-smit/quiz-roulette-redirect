@@ -9,10 +9,11 @@
 <body>
     If your browser doesn't automatically go there within a few seconds,
     you may want to go to
-    <a href="https://it-club-quiz.herokuapp.com/">Quiz Roulette</a>
+    <a id="redirect" href="#">Quiz Roulette</a>
     manually.
 </body>
 <script>
 window.location.href = "https://it-club-quiz.herokuapp.com/account/"+window.location.href.substring(window.location.href.indexOf("?")+1);
+document.getElementById("redirect").href="https://it-club-quiz.herokuapp.com/account/"+window.location.href.substring(window.location.href.indexOf("?")+1);
 </script>
 </html>
