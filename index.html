@@ -13,7 +13,9 @@
     manually.
 </body>
 <script>
-window.location.href = "https://quizroulette.herokuapp.com/account/"+window.location.href.substring(window.location.href.indexOf("?")+1);
-document.getElementById("redirect").href="https://quizroulette.herokuapp.com/account/"+window.location.href.substring(window.location.href.indexOf("?")+1);
+if(window.location.href.indexOf("?") > -1) window.location.href = "https://quizroulette.herokuapp.com/account/"+window.location.href.substring(window.location.href.indexOf("?")+1);
+else window.location.href = "https://quizroulette.herokuapp.com/account/";
+if(window.location.href.indexOf("?") > -1) document.getElementById("redirect").href="https://quizroulette.herokuapp.com/account/"+window.location.href.substring(window.location.href.indexOf("?")+1);
+else document.getElementById("redirect").href="https://quizroulette.herokuapp.com/account/";
 </script>
 </html>
